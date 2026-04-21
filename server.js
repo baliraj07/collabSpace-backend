@@ -14,6 +14,9 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.send('CollabSpace Backend is Running 🚀');
+});
 
 // DB Connect
 mongoose.connect(process.env.MONGODB_URI)
